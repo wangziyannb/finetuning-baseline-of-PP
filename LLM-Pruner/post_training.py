@@ -170,16 +170,16 @@ def main(args):
     # )
 
     def get_c4(samples, cutoff_len, tokenizer, seed):
-        if os.path.exists(f"data/c4_{seed}.json"):
-            dataset = load_dataset("json", data_files=f'data/c4_{seed}.json')
+        if os.path.exists(f"data/c4_{seed}_{cutoff_len}.json"):
+            dataset = load_dataset("json", data_files=f"data/c4_{seed}_{cutoff_len}.json")
             if len(dataset['train']) == samples:
-                print("load c4 from {}".format(f"data/c4_{seed}.json"))
+                print("load c4 from {}".format(f"data/c4_{seed}_{cutoff_len}.json"))
                 return dataset
 
-        with open(f'sampled_dataset_seed{seed}_seqlen256_size20000.pkl', 'rb') as file:
+        with open(f'sampled_dataset_seed{seed}_seqlen{cutoff_len}_size20000.pkl', 'rb') as file:
             dataset = pickle.load(file)
         # dataset = load_dataset('allenai/c4', data_files={'train': 'en/c4-train.00000-of-01024.json.gz'}, split='train')
-        print(f"Sampling {samples} data from sampled_dataset_seed{seed}_seqlen256_size20000.pkl")
+        print(f"Sampling {samples} data from sampled_dataset_seed{seed}_seqlen{cutoff_len}_size20000.pkl")
         subdata, history = [], []
         for i in tqdm.tqdm(range(samples)):
             while True:
@@ -189,9 +189,9 @@ def main(args):
                     history.append(i)
                     break
             subdata.append({"inputs": dataset[i]['text']})
-        with open(f'data/c4_{seed}.json', 'w') as f:
+        with open(f"data/c4_{seed}_{cutoff_len}.json", 'w') as f:
             f.writelines(json.dumps(subdata))
-        return load_dataset("json", data_files=f'data/c4_{seed}.json')
+        return load_dataset("json", data_files=f"data/c4_{seed}_{cutoff_len}.json")
 
     if args.cache_dataset and os.path.exists('datasets/cache/{}.bin'.format(args.data_path)):
         preprocess_data = torch.load('datasets/cache/{}.bin'.format(args.data_path))
