@@ -57,3 +57,6 @@
 | **LLM-Pruner w/o LoRA** | 40%           | 51.1 (4.3)                     | 34.5 (2.4)                      | N/A                         | 47.8                                 | 52.0                                  | N/A                               |
 | **PP**                  | 40%           | **16.8 (0.1)**                 | **11.3 (0.1)**                  | **26.7 (0.3)**              | **56.6**                             | **61.0**                              | **53.1**                          |
 
+## Acknowledgement
+- LLM-Pruner: [code](https://github.com/horseee/LLM-Pruner), [paper](https://arxiv.org/abs/2305.11627)
+- LoRAPrune: [code](https://github.com/aim-uofa/LoRAPrune), [paper](https://arxiv.org/abs/2305.18403)
