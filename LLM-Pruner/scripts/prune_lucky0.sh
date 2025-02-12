@@ -83,4 +83,4 @@ task_post_training "$prune0_7b" 0 0 &
 #task_post_training "$prune8_7b" 2 8
 wait
 
-echo '所有任务完成'
+echo 'All task finished'
