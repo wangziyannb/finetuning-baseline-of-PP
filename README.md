@@ -22,18 +22,18 @@
 
 ## Examples
 
-- (LLM-Pruner) Pruning and recovery re-training on LLaMA-2-7B.
+- (LLM-Pruner) Pruning, recovery re-training on LLaMA-2-7B.
 
   ```ruby
   cd LLM-Pruner
-  bash script/prune_0.sh
+  bash scripts/prune_0.sh
   ```
 
-- (LoRAPrune) Pruning during training on LLaMA-2-7B.
+- (LoRAPrune) Pruning during training on LLaMA-2-7B (One-shot tasks are also included).
 
   ```ruby
   cd LoRAPrune
-  bash script/prune.sh
+  bash scripts/prune.sh
   ```
 
 
