@@ -13,18 +13,27 @@
 - C4 calibration dataset can be found [here](https://drive.google.com/file/d/1dTl7rPeOqKqQmFPxldITolJTVAp8MScv/view?usp=sharing). Please download it and place it under the root folder in each baseline.
 - Checkpoints can be found [here](https://drive.google.com/drive/folders/170q3BcGBaG8mGu7KTc6eVxrN36S-dNNJ?usp=drive_link)
 
+## Instruction
+
+- Prepare model weights and modify the scripts to reflect the updated path.
+- Uncomment to run other tasks (vary of seed, other pruning ratio, etc.).
+- Select GPU index and change the last parameter based on your machine.
+- Code for PP with evaluation script is available [here](). 
+
 ## Examples
 
-- Test WikiText2 dataset using Probe Pruning with the default probe at a 40% pruning ratio on LLaMA-2-7B.
+- (LLM-Pruner) Pruning and recovery re-training on LLaMA-2-7B.
 
   ```ruby
-  python test_model.py --control_name wikitext-2v1_llama-2-7b_clm_20_1024_0.4_ppwandasp_probe-default_sync_c4-2000_0.5+0.05-0.5+0.05-0.5+0.05-0.5+0.05-0.5+0.05-seqrank+bszrank_default --device cuda
+  cd LLM-Pruner
+  bash script/prune_0.sh
   ```
 
-- Test WikiText2 dataset using FLAP at a 40% pruning ratio on LLaMA-2-7B.
+- (LoRAPrune) Pruning during training on LLaMA-2-7B.
 
   ```ruby
-  python test_model.py --control_name wikitext-2v1_llama-2-7b_clm_20_1024_0.4_flap_flap-default_asyncinter_c4-2000_None_default --device cuda
+  cd LoRAPrune
+  bash script/prune.sh
   ```
 
 
