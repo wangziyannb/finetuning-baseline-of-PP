@@ -83,4 +83,4 @@ wait
 
 
 
-echo '所有任务完成'
+echo 'All task finished'
