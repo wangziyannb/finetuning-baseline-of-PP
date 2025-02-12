@@ -18,7 +18,7 @@
 - Prepare model weights and modify the scripts to reflect the updated path.
 - Uncomment to run other tasks (vary of seed, other pruning ratio, etc.).
 - Select GPU index and change the last parameter based on your machine.
-- Code for PP with evaluation script is available [here](). 
+- Code for PP with evaluation script is available [here](https://github.com/Qi-Le1/Probe_Pruning). 
 
 ## Examples
 
