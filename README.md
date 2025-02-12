@@ -1,6 +1,6 @@
 # Probe Pruning: Accelerating LLMs through Dynamic Pruning via Model-Probing
 
-[ICLR 2025] This is an implementation of *Probe Pruning: Accelerating LLMs through Dynamic Pruning via Model-Probing*
+[ICLR 2025] This is an implementation of fine-tuning baselines in *Probe Pruning: Accelerating LLMs through Dynamic Pruning via Model-Probing*
 
 ![Main Method](asset/method.png)
 
@@ -8,19 +8,10 @@
 
 ## Requirements
 
-- Requires Python 3.9.
-- See pprequirements.txt.
-- See localtunedllmrequirements.txt for running LLM-Pruner and LoRA-Prune tuned models.
-- C4 calibration dataset can be found at [here](https://drive.google.com/file/d/1dTl7rPeOqKqQmFPxldITolJTVAp8MScv/view?usp=sharing). Please download it and place it under data/c4.
-
-## Instruction
-
-- Global hyperparameters are configured in config.yml.
-
-- Hyperparameters can be found at hyper.py in modules.
-
-- Code for tuning model using LLM-Pruner and LoRA-Prune is available [here]() and example tuned models are available [here]().
-
+- Tested under Python 3.10.
+- See requirements.txt in each baseline. Tested using a separate environment. Be careful about reference conflicts if you are using only one environment.  
+- C4 calibration dataset can be found [here](https://drive.google.com/file/d/1dTl7rPeOqKqQmFPxldITolJTVAp8MScv/view?usp=sharing). Please download it and place it under the root folder in each baseline.
+- Checkpoints can be found [here](https://drive.google.com/drive/folders/170q3BcGBaG8mGu7KTc6eVxrN36S-dNNJ?usp=drive_link)
 
 ## Examples
 
