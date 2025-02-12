@@ -11,7 +11,7 @@
 - Tested under Python 3.10.
 - See requirements.txt in each baseline. Tested using a separate environment. Be careful about reference conflicts if you are using only one environment.  
 - C4 calibration dataset can be found [here](https://drive.google.com/file/d/1dTl7rPeOqKqQmFPxldITolJTVAp8MScv/view?usp=sharing). Please download it and place it under the root folder in each baseline.
-- Checkpoints can be found [here](https://drive.google.com/drive/folders/170q3BcGBaG8mGu7KTc6eVxrN36S-dNNJ?usp=drive_link)
+- Checkpoints can be found [here](https://drive.google.com/drive/folders/170q3BcGBaG8mGu7KTc6eVxrN36S-dNNJ?usp=drive_link).
 
 ## Instruction
 
